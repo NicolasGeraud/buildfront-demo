@@ -1,0 +1,22 @@
+{
+  "name": "charte-graphique",
+  "version": "1.0.0",
+  "authors": [
+    "Nicolas Géraud <nicolas.geraud@gmail.com>"
+  ],
+  "description": "La charte graphique de mon entreprise",
+  "main": "main.css",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_source": "/home/nicolasger/Work/prez/charte-graphique",
+  "_target": "*",
+  "_originalSource": "/home/nicolasger/Work/prez/charte-graphique",
+  "_direct": true
+}

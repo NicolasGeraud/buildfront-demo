@@ -1,0 +1,25 @@
+body {
+    background: none repeat scroll 0% 0% #FAFAFA;
+    font-size: 24px;
+}
+
+th {
+    text-align: center;
+}
+td{
+    background-color: white;
+}
+
+.header {
+    background-color: #03A9F4;
+    padding:40px 0 40px 0 ;
+}
+
+.input-lg {
+    font-size: 24px;
+}
+
+.done {
+    font-style: italic;
+    text-decoration: line-through;
+}

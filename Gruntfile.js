@@ -11,16 +11,26 @@ module.exports = function(grunt) {
             task: {
                 src: 'index.html'
             }
-        }
+        },
 
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    hostname: 'localhost'
+                }
+            }
+        }
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks("grunt-wiredep")
+    grunt.loadNpmTasks("grunt-wiredep");
+    grunt.loadNpmTasks("grunt-contrib-connect")
 
     // Default task.
     grunt.registerTask('default', [
-        "wiredep"
+        "wiredep",
+        "connect:server"
     ]);
 
 };

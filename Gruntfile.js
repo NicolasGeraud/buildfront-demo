@@ -18,21 +18,36 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     hostname: 'localhost',
-                    keepalive: true,
+                    livereload: 35729,
                     open: true
                 }
+            }
+        },
+
+        watch: {
+            livereload: {
+                options: {
+                    livereload: '<%= connect.server.options.livereload %>'
+                },
+                files: [
+                    'index.html',
+                    'styles/app.css'
+                ]
+
             }
         }
     });
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks("grunt-wiredep");
-    grunt.loadNpmTasks("grunt-contrib-connect")
+    grunt.loadNpmTasks("grunt-contrib-connect");
+    grunt.loadNpmTasks("grunt-contrib-watch");
 
     // Default task.
     grunt.registerTask('default', [
         "wiredep",
-        "connect:server"
+        "connect:server",
+        "watch"
     ]);
 
 };

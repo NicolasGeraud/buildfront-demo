@@ -11,6 +11,12 @@ module.exports = function(grunt) {
             dist: './dist'
         },
 
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
+        },
+
         // Task configuration.
         wiredep: {
             task: {
@@ -178,5 +184,9 @@ module.exports = function(grunt) {
         'connect:server',
         'watch'
     ]);
+
+    grunt.registerTask('test', [
+        'karma'
+    ])
 
 };
